@@ -1,3 +1,3 @@
-# LunaLearnCpp
+# Golang\Aslak
 
-Apprentissage de C++ par les membres de LunaProject ;)
+Avancement de l'apprentissage d'Aslak
