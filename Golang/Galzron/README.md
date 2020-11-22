@@ -1,3 +1,3 @@
-# LunaLearnCpp
+# Golang\Galzron
 
-Apprentissage de C++ par les membres de LunaProject ;)
+Avancement de l'apprentissage de Galzron
