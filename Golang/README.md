@@ -1,3 +1,3 @@
-# LunaLearnCpp
+# Golang
 
-Apprentissage de C++ par les membres de LunaProject ;)
+Apprentissage de Golang par les membres de LunaProject ;)
