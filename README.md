@@ -2,7 +2,7 @@
 
 ## Français 🇨🇵
 
-Dans cette repositories public, vous pourrez voire notre avancement dans notre apprentissage de 4 merveilleux langages de programmation qui sont : Rust, Python, C++ et Golang. 
+Dans cette repositories public, vous pourrez voir notre avancement dans notre apprentissage de 4 merveilleux langages de programmation qui sont : Rust, Python, C++ et Golang. 
 
 Ceci nous est très utile si nous avons un trou de mémoire etc sur la manière d'utiliser ou procéder pour effectuer ce que l'on demande, mais cela peut très bien vous êtres utiles à vous aussi si vous aviez du mal sur quelque chose dans l'un de ces 4 langages vous n'avez qu'a regarder ici !
 
