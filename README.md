@@ -19,6 +19,6 @@ You will also be able to observe our way / style and level in development and ma
 ### Documentation 📚
 
 <img src="https://devicons.github.io/devicon/devicon.git/icons/cplusplus/cplusplus-original.svg" alt="cpp" width="40" height="40"/>  [Click here for C++ documentation](https://devdocs.io/cpp/)            
-<img src="https://devicons.github.io/devicon/devicon.git/icons/python/python-original.svg" alt="python" width="40" height="40"/>  [Click here for Pyton documentation](https://docs.python.org/3/index.html)  
+<img src="https://devicons.github.io/devicon/devicon.git/icons/python/python-original.svg" alt="python" width="40" height="40"/>  [Click here for Python documentation](https://docs.python.org/3/index.html)  
 <img src="https://devicons.github.io/devicon/devicon.git/icons/go/go-original.svg" alt="golang" width="40" height="40"/>  [Click here for Golang documentation](https://golang.org/doc/)  
 <img src="https://devicons.github.io/devicon/devicon.git/icons/rust/rust-plain.svg" alt="rust" width="40" height="40"/>  [Click here for Rust documentation](https://www.rust-lang.org/learn)
