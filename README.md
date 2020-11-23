@@ -8,7 +8,7 @@ Ceci nous est très utile si nous avons un trou de mémoire etc sur la manière 
 
 Vous pourrez également observer notre façon / style et niveau dans le développement et peut être qui sait deviner nos projets futur !
 
-<p align="left"> [C++](https://devdocs.io/cpp/)  <img src="https://devicons.github.io/devicon/devicon.git/icons/cplusplus/cplusplus-original.svg" alt="cpp" width="40" height="40"/>  [Python](https://docs.python.org/3/index.html)  <img src="https://devicons.github.io/devicon/devicon.git/icons/python/python-original.svg" alt="python" width="40" height="40"/>  [Golang](https://golang.org/doc/)  <img src="https://devicons.github.io/devicon/devicon.git/icons/go/go-original.svg" alt="golang" width="40" height="40"/>  [Rust](https://www.rust-lang.org/learn)  <img src="https://devicons.github.io/devicon/devicon.git/icons/rust/rust-plain.svg" alt="rust" width="40" height="40"/>
+<p align="left">  <img src="https://devicons.github.io/devicon/devicon.git/icons/cplusplus/cplusplus-original.svg" alt="cpp" width="40" height="40"/>  <img src="https://devicons.github.io/devicon/devicon.git/icons/python/python-original.svg" alt="python" width="40" height="40"/>  <img src="https://devicons.github.io/devicon/devicon.git/icons/go/go-original.svg" alt="golang" width="40" height="40"/>  <img src="https://devicons.github.io/devicon/devicon.git/icons/rust/rust-plain.svg" alt="rust" width="40" height="40"/>
 
 
 ## English 🇬🇧
@@ -20,3 +20,11 @@ This is very useful for us if we have a memory lapse etc. on how to use or proce
 You will also be able to observe our way / style and level in development and maybe who knows how to guess our future projects!
 
 <p align="left"> <img src="https://devicons.github.io/devicon/devicon.git/icons/cplusplus/cplusplus-original.svg" alt="cpp" width="40" height="40"/>  <img src="https://devicons.github.io/devicon/devicon.git/icons/python/python-original.svg" alt="python" width="40" height="40"/>  <img src="https://devicons.github.io/devicon/devicon.git/icons/go/go-original.svg" alt="golang" width="40" height="40"/>  <img src="https://devicons.github.io/devicon/devicon.git/icons/rust/rust-plain.svg" alt="rust" width="40" height="40"/>
+
+
+### Documentation
+
+[C++](https://devdocs.io/cpp/)
+[Python](https://docs.python.org/3/index.html)  
+[Golang](https://golang.org/doc/)  
+[Rust](https://www.rust-lang.org/learn)
