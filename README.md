@@ -24,7 +24,7 @@ You will also be able to observe our way / style and level in development and ma
 
 ### Documentation
 
-[C++](https://devdocs.io/cpp/)
+[C++](https://devdocs.io/cpp/)             
 [Python](https://docs.python.org/3/index.html)  
 [Golang](https://golang.org/doc/)  
 [Rust](https://www.rust-lang.org/learn)
