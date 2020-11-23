@@ -24,7 +24,7 @@ You will also be able to observe our way / style and level in development and ma
 
 ### Documentation
 
-[C++](https://devdocs.io/cpp/)             
+[C++](https://devdocs.io/cpp/) <p align="left"> <img src="https://devicons.github.io/devicon/devicon.git/icons/cplusplus/cplusplus-original.svg" alt="cpp" width="40" height="40"/>             
 [Python](https://docs.python.org/3/index.html)  
 [Golang](https://golang.org/doc/)  
 [Rust](https://www.rust-lang.org/learn)
