@@ -7,7 +7,7 @@ def function():
 
 function()
 
-# Nous pouvons passer 'paremetre' dans une fonction comme ici
+# Nous pouvons passer 'parametre' dans une fonction comme ici
 
 def parametre(n,m):
     for _ in range(0,n): # La fonction range () renvoie une séquence de nombres, commençant par 0 par défaut et incrémentée de 1 (par défaut), et s'arrête avant un nombre spécifié.
