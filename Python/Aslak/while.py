@@ -1,6 +1,6 @@
 # Ici nous allons étudier la boucle while
 
-# On rajoue pour compliqué la chose une condition
+# On rajoute pour compliqué la chose une condition
 # Si n est supérieur à 5, afficher reponse correcte et terminer le programme
 # Sinon, afficher reponse incorecte et redemander de donner un nombre n supérieur ou égale à 5
 
