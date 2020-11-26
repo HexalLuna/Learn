@@ -8,15 +8,20 @@
 
 int Lecture_Tension  = A1; //Déclarations d'une variable de type int
 int Lecture_Intensité  = A0; //Déclarations d'une variable de type int
+int Lecture_EnergieAbs = A2; //Déclarations d'une variable de type int
+
 int Te = 30000 ; // Définit la valeur de la période d'échantillonnage Te en ms (valeur à prendre entre 30 000 ms)
 
-int energie[200] = {}; // On définit d'une array appelée "energie" pouvant contenir jusque 201 données et laissé vide pour le moment
+float energie[200] = {}; // On définit d'une array appelée "energie" pouvant contenir jusque 201 données et laissé vide pour le moment qui doit donner les valeurs de l'énergie absorbée
+int mesure[200] = {}; // On définit un tableau de variables appelée "mesure" pouvant contenir jusque 201 données et laissé vide pour l'instant
 
 const int rs = 2, en = 4, d4 = 9, d5 = 10, d6 = 11, d7 = 12; //Ici nous déclarons des constantes de valeur int
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7); //Utilisaion de LiquidCrystal
 
 float Tension = 0.0; //Nous déclarons ici une variable de valeur float
 float Intensité = 0.0; //Nous déclarons ici une variable de valeur float
+float Puissance = 0.0; //Nous déclarons ici une variable de valeur float
+float Rendement = 0.0; //Exprimer en %
 
 /*
 * Initialisation du programme
@@ -49,31 +54,34 @@ void loop() {
 
     while(int i = 0; i < 360000 / Te; i++) { //Boucle d'acquisition de mesures durant 360s
         energie[i] = analogRead(1);
-        delay(Te);
+        mesure[i] = i*Te; // met dans instant n° i la valeur de l'instant d'échantillonnage
+        delay(Te);  //Attend la durée de la période d'échantilllonnage Te
     }
 
     float Tension = analogRead(Lecture_Tension);
     float Intensité = analogRead(Lecture_Intensité);
+    float EnergieAbs = analogRead(Lecture_EnergieAbs);
 
     Tension = Tension * (5.0 / 1023.0) * 6.46; 
     Intensité = Intensité * (5.0 / 1023.0) * 0.239;
-    Energie = energie[i];
+    Puissance = Tension * Intensité;
+
+    EnergieAbs = energie[i];
+    Rendement = EnergieAbs / Puissance;
 
     Serial.println(Tension);
     lcd.print(" ");
     Serial.println(Intensité);
     lcd.print(" ");
-    Serial.println(Energie);
-    
-    float Puissance = Tension * Intensité;
+    Serial.println(EnergieAbs);
 
     lcd.setCursor(0, 0);
 
-    lcd.print("M="); lcd.print(Rendement); //On affiche le rendement noté M sur le LCD
+    lcd.print("M="); lcd.print(Rendement); //On affiche le rendement noté M sur le LCD . ( écran )
     lcd.print(" ");
-    lcd.print("s="); lcd.print(time); //On affiche le temps du parcours en secondes
+    lcd.print("s="); lcd.print(time); //On affiche le temps du parcours en secondes sur le LCD . ( écran )
     lcd.print(" ");
-    lcd.print("Eabs="); lcd.print(Energie); //On affiche l'énergie absorbée noté Eabs sur le LCD
+    lcd.print("Eabs="); lcd.print(EnergieAbs, "%"); //On affiche l'énergie absorbée noté Eabs sur le LCD . ( écran )
 
     lcd.setCursor(0, 1);
     delay(1000);
