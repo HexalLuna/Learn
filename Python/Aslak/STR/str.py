@@ -1,6 +1,3 @@
-# Certains d'entre vous se demandent peut-être l'intérêt de 
-# passer des chaînes en minuscules… alors voici un petit exemple.
-
 chaine = str() # Crée une chaîne vide
 # On aurait obtenu le même résultat en tapant chaine = ""
 
