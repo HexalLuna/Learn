@@ -22,4 +22,4 @@ You will also be able to observe our way / style and level in development and ma
 <img src="https://devicons.github.io/devicon/devicon.git/icons/python/python-original.svg" alt="python" width="40" height="40"/>  [Click here for Python documentation](https://docs.python.org/3/index.html)  
 <img src="https://devicons.github.io/devicon/devicon.git/icons/go/go-original.svg" alt="golang" width="40" height="40"/>  [Click here for Golang documentation](https://golang.org/doc/)  
 <img src="https://devicons.github.io/devicon/devicon.git/icons/rust/rust-plain.svg" alt="rust" width="40" height="40"/>  [Click here for Rust documentation](https://www.rust-lang.org/learn)                
-<img src="https://devicons.github.io/devicon/devicon.git/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>  [Click here for JAVASCRIPT documentation](https://developer.mozilla.org/en/docs/Web/JavaScript)
+<img src="https://devicons.github.io/devicon/devicon.git/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>  [Click here for Javascript documentation](https://developer.mozilla.org/en/docs/Web/JavaScript)
