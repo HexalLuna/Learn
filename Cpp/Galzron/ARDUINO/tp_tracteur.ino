@@ -73,7 +73,7 @@ void loop() {
         chronoStatus = false;
         motorStop();
 
-        float Rendement = float(5 * 40 * (pow(10, -3))) * 
+        float Rendement = //Il me faut le coeff de rendement
         
         lcd.setCursor(0, 0);
         lcd.print("U= 5V"); //display voltage on the screen
