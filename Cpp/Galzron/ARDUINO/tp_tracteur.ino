@@ -14,8 +14,9 @@ bool chronoStatus;
 unsigned long millisBoutonON = millis();
 unsigned long millisBoutonOff = 0;
 
-/* Calcul */
+/* Calcul et autres */
 int EnergieABS = float(5 * 40 * (pow(10, -3)); //5 is current voltage, 40 is current intensity, with this calcul EnergieABS = 0.2
+int EnergieUtile;                       
 
 /* Fonction d'initialisation */
 void setup() {
@@ -72,8 +73,9 @@ void loop() {
         Serial.println("Chrono OFF = " + String(millisBoutonOff));
         chronoStatus = false;
         motorStop();
-
-        float Rendement = //Il me faut le coeff de rendement
+      
+        int Rendement = x // ton rendement
+        float EnergieUtile = Rendement * EnergieABS
         
         lcd.setCursor(0, 0);
         lcd.print("U= 5V"); //display voltage on the screen
