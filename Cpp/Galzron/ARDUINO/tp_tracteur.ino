@@ -15,7 +15,7 @@ unsigned long millisBoutonON = millis();
 unsigned long millisBoutonOff = 0;
 
 /* Calcul */
-int EnergieABS = float(5 * 40 * (pow(10, -3)) * cos(1.61803399)); //5 is current voltage, 40 is current intensity and 1.61803399 is the value of the golden number phi
+int EnergieABS = float(5 * 40 * (pow(10, -3)); //5 is current voltage, 40 is current intensity
 
 /* Fonction d'initialisation */
 void setup() {
