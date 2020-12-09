@@ -15,7 +15,7 @@ unsigned long millisBoutonON = millis();
 unsigned long millisBoutonOff = 0;
 
 /* Calcul */
-int EnergieABS = float(5 * 40 * (pow(10, -3)); //5 is current voltage, 40 is current intensity
+int EnergieABS = float(5 * 40 * (pow(10, -3)); //5 is current voltage, 40 is current intensity, with this calcul EnergieABS = 0.2
 
 /* Fonction d'initialisation */
 void setup() {
