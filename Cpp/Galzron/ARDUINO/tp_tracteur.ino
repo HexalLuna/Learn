@@ -94,4 +94,3 @@ void loop() {
         lcd.print(Rendement);
     }
 }
-//Merci la Terminal STI de Levallois pour l'aide sur pas mal de tips et calcul
