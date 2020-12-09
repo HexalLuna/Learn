@@ -74,8 +74,9 @@ void loop() {
         chronoStatus = false;
         motorStop();
       
-        int Rendement = x //coefficient de rendement
-        float EnergieUtile = Rendement * EnergieABS
+        int coeffRendement = x;//j'ai pas le coeff
+        float EnergieUtile = coeffRendement * EnergieABS;
+        float Rendement = EnergieUtile / EnergieABS;
         
         lcd.setCursor(0, 0);
         lcd.print("U= 5V"); //display voltage on the screen
