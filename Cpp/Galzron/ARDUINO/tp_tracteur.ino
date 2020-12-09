@@ -1,88 +1,93 @@
-#include <LiquidCrystal.h>  //Imporation de la librairie "LiquidCrystal" essentiellement programmé en H (fichier header des langages C)
+/* Importation des libraries */
+#include <LiquidCrystal.h>
 
-/*
-* Une variable dite float est un int décimal, exemple : 1.0 est un float. Un float est donc une valeur numérique décimales (chiffres décimals, nombres décimals)
-* Une variable dite int, exemple : 2 est un int. Un int est donc une valeur numérique (chiffres, nombres)
-* Une array est un tableau de variables
-*/
+/* Variables utilisées pour le moteur */
+const int enableBridge = 2;
+const int MotorForward = 3;
+const int MotorReverse = 5;
+int Power = 80;
 
-int Lecture_Tension  = A1; //Déclarations d'une variable de type int
-int Lecture_Intensité  = A0; //Déclarations d'une variable de type int
-int Lecture_EnergieAbs = A2; //Déclarations d'une variable de type int
+/* Variables utilisées pour le bouton et chrono */
+st int  butonPin = 9;
+int boutonState = 0;
+bool chronoStatus;
+unsigned long millisBoutonON = millis();
+unsigned long millisBoutonOff = 0;
 
-int Te = 30000 ; // Définit la valeur de la période d'échantillonnage Te en ms (valeur à prendre entre 30 000 ms)
+/* Calcul */
+int EnergieABS = float(5 * 40 * (pow(10, -3)) * cos(1.61803399)); //5 is current voltage, 40 is current intensity and 1.61803399 is the value of the golden number phi
 
-float energie[200] = {}; // On définit d'une array appelée "energie" pouvant contenir jusque 201 données et laissé vide pour le moment qui doit donner les valeurs de l'énergie absorbée
-int mesure[200] = {}; // On définit un tableau de variables appelée "mesure" pouvant contenir jusque 201 données et laissé vide pour l'instant
+/* Fonction d'initialisation */
+void setup() {
+  lcd.init();
+  motorOn();
 
-const int rs = 2, en = 4, d4 = 9, d5 = 10, d6 = 11, d7 = 12; //Ici nous déclarons des constantes de valeur int
-LiquidCrystal lcd(rs, en, d4, d5, d6, d7); //Utilisaion de LiquidCrystal
+  lcd.begin(16, 2);
+  Serial.begin(9600);
 
-float Tension = 0.0; //Nous déclarons ici une variable de valeur float
-float Intensité = 0.0; //Nous déclarons ici une variable de valeur float
-float Puissance = 0.0; //Nous déclarons ici une variable de valeur float
-float Rendement = 0.0; //Exprimer en %
+  inMode(butonPin, INPUT_PULLUP);
+  chronoStatus = true;
 
-/*
-* Initialisation du programme
-*/
-void setup()  {
+  lcd.setCursor(0, 1);
 
-    pinMode(13, OUTPUT);
-    pinMode(13, OUTPUT);
-
-    lcd.begin(16, 2); //Initialise le lcd 16*2
-    Serial.begin(9600);
-
-    lcd.print("---- Groupe 3 ----"); //Message d'intro pour faire jolie
-    lcd.setCursor(0, 1);
-    lcd.print("---- Arduino ----"); //Message d'intro pour faire jolie
-
-    delay(2000);
-    lcd.clear(); //efface les anciennes données de l'écran
+  delay(2000);
+  lcd.clear();
 }
 
-/*
-* Initialisation du programme
-*/
+/* Fonction d'allumage moteur */
+void motorOn() {
+  pinMode(MotorForward, OUTPUT);
+  pinMode(MotorReverse, OUTPUT);
+  pinMode(enableBridge, OUTPUT);
+}
+
+/* Fonction de rotation moteur */
+void motorForward(int Power) {
+  digitalWrite(enableBridge, HIGH);
+  analogWrite(MotorForward, Power);
+  analogWrite(MotorReverse, 0);
+}
+
+/* Fonction d'arrêt moteur */
+void motorStop() {
+  analogWrite(MotorForward, 0);
+  analogWrite(MotorReverse, 0);
+  digitalWrite(enableBridge, LOW); 
+}
+
+/* Fonction boucle */
 void loop() {
-    
-    digitalWrite(13, HIGH); //demarrage du moteur
+    boutonState = digitalRead(butonPin);
 
-    long milisecondes = millis(); //calcul le temps en mililisecondes
-    long time = milisecondes / 1000; //convertie les millisecondes en secondes
-
-    while(int i = 0; i < 360000 / Te; i++) { //Boucle d'acquisition de mesures durant 360s
-        energie[i] = analogRead(1);
-        mesure[i] = i*Te; // met dans instant n° i la valeur de l'instant d'échantillonnage
-        delay(Te);  //Attend la durée de la période d'échantilllonnage Te
+    if (boutonState == LOW && chronoStatus == false) {
+        motorOn();
+        millisBoutonON = millis();
+        Serial.println("Chrono ON");
+        chronoStatus = true;
+        motorForward();
     }
+        
+    if (boutonState == HIGH && chronoStatus == true) {
+        millisBoutonOff = millis() - millisBoutonON;
+        Serial.println("Chrono OFF = " + String(millisBoutonOff));
+        chronoStatus = false;
+        motorStop();
 
-    float Tension = analogRead(Lecture_Tension);
-    float Intensité = analogRead(Lecture_Intensité);
-    float EnergieAbs = analogRead(Lecture_EnergieAbs);
+        float Rendement = float(5 * 40 * (pow(10, -3))) * 
+        
+        lcd.setCursor(0, 0);
+        lcd.print("U= 5V"); //display voltage on the screen
 
-    Tension = Tension * (5.0 / 1023.0) * 6.46; 
-    Intensité = Intensité * (5.0 / 1023.0) * 0.239;
-    Puissance = Tension * Intensité;
+        lcd.setCursor(0, 1);
+        lcd.print("I= 40mA"); //display current intensity on the screen
 
-    EnergieAbs = energie[i];
-    Rendement = EnergieAbs / Puissance;
+        lcd.setCursor(1, 0);
+        lcd.print(int(millisBoutonOff), "s"); //display the travel time on the screen
 
-    Serial.println(Tension);
-    lcd.print(" ");
-    Serial.println(Intensité);
-    lcd.print(" ");
-    Serial.println(EnergieAbs);
+        lcd.setCursor(1, 1);
+        lcd.print(EnergieABS); //display the absorbed energy on the screen
 
-    lcd.setCursor(0, 0);
-
-    lcd.print("M="); lcd.print(Rendement); //On affiche le rendement noté M sur le LCD . ( écran )
-    lcd.print(" ");
-    lcd.print("s="); lcd.print(time); //On affiche le temps du parcours en secondes sur le LCD . ( écran )
-    lcd.print(" ");
-    lcd.print("Eabs="); lcd.print(EnergieAbs, "%"); //On affiche l'énergie absorbée noté Eabs sur le LCD . ( écran )
-
-    lcd.setCursor(0, 1);
-    delay(1000);
+        lcd.setCursor(2, 0);
+        lcd.print(Rendement);
+    }
 }
