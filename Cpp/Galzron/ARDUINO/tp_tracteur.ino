@@ -74,7 +74,7 @@ void loop() {
         chronoStatus = false;
         motorStop();
       
-        int Rendement = x // ton rendement
+        int Rendement = x //coefficient de rendement
         float EnergieUtile = Rendement * EnergieABS
         
         lcd.setCursor(0, 0);
@@ -93,3 +93,4 @@ void loop() {
         lcd.print(Rendement);
     }
 }
+//Merci la Terminal STI de Levallois pour l'aide sur pas mal de tips et calcul
