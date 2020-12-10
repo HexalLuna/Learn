@@ -1,50 +1,56 @@
-/* Importation des libraries */
+/* Importation et setup de LiquidCrystal */
+/* Importation et setup de LiquidCrystal */
 #include <LiquidCrystal.h>
 
+LiquidCrystal lcd(8, 9, 4, 5 ,6 ,7);
+
 /* Variables utilisées pour le moteur */
-const int enableBridge = 2;
-const int MotorForward = 3;
-const int MotorReverse = 5;
+const int MotorForward = 10;
+const int MotorReverse = 11;
 int Power = 80;
 
+/* Variables utilisées pour le calcul de l'intensité et de la tension du courant */
+const int RVar = 0;
+int mesureBrute = 0;
+float mesure;
+
 /* Variables utilisées pour le bouton et chrono */
-st int  butonPin = 9;
+int  butonPin = A0;
 int boutonState = 0;
 bool chronoStatus;
 unsigned long millisBoutonON = millis();
 unsigned long millisBoutonOff = 0;
 
-/* Calcul et autres */
-int EnergieABS = float(5 * 40 * (pow(10, -3)); //5 is current voltage, 40 is current intensity, with this calcul EnergieABS = 0.2
-int EnergieUtile;                       
-
 /* Fonction d'initialisation */
 void setup() {
-  lcd.init();
-  motorOn();
+    Serial.begin(115200);
+    motorOn();
 
-  lcd.begin(16, 2);
-  Serial.begin(9600);
+    pinMode(butonPin, INPUT_PULLUP);
+    chronoStatus = true;
 
-  inMode(butonPin, INPUT_PULLUP);
-  chronoStatus = true;
+    lcd.begin(20, 4);
 
-  lcd.setCursor(0, 1);
+    lcd.clear(); //efface LCD + se place en 0, 0
+    delay(10); //très très courte pause après clear()
 
-  delay(2000);
-  lcd.clear();
+    lcd.print("Bienvenue :) !");
+    delay(1000); //pause de une secondes
+
+    lcd.clear(); //efface LCD + se place en 0, 0
+    delay(10); //très très courte pause après clear()
 }
 
 /* Fonction d'allumage moteur */
 void motorOn() {
   pinMode(MotorForward, OUTPUT);
   pinMode(MotorReverse, OUTPUT);
-  pinMode(enableBridge, OUTPUT);
+  pinMode(2, OUTPUT);
 }
 
 /* Fonction de rotation moteur */
 void motorForward(int Power) {
-  digitalWrite(enableBridge, HIGH);
+  digitalWrite(2, HIGH);
   analogWrite(MotorForward, Power);
   analogWrite(MotorReverse, 0);
 }
@@ -53,19 +59,52 @@ void motorForward(int Power) {
 void motorStop() {
   analogWrite(MotorForward, 0);
   analogWrite(MotorReverse, 0);
-  digitalWrite(enableBridge, LOW); 
+  digitalWrite(2, LOW); 
 }
 
 /* Fonction boucle */
 void loop() {
+
     boutonState = digitalRead(butonPin);
 
     if (boutonState == LOW && chronoStatus == false) {
-        motorOn();
         millisBoutonON = millis();
         Serial.println("Chrono ON");
         chronoStatus = true;
-        motorForward();
+        motorForward(Power);
+
+        mesureBrute = analogRead(RVar);
+        mesure = map(mesureBrute, 0, 1023, 0.0, 5000.0);
+        float volts = mesure * 1000; //conversion millivolts en volts
+        float intensity = volts / 0.3; //calcul de l'intensite par la formule I= U/R
+
+        for(float i=0; i<=100; i= intensity * volts * 0.3) {
+          int Rendement = 1.5 / i;
+
+            lcd.setCursor(0, 0);
+            lcd.print("I: ");
+            lcd.print(intensity, 2);
+            lcd.print(" mA "); //display intensity on the screen
+
+            lcd.setCursor(0, 1);
+            lcd.print("E: ");
+            lcd.print(i);
+            lcd.print(" J ");
+            
+            lcd.setCursor(0, 2);
+            lcd.print("U: ");
+            lcd.print(volts, 2);
+            lcd.print(" V "); //display voltage on the screen
+            
+            lcd.setCursor(0, 3);
+            lcd.print("T: ");
+            lcd.print(int(millisBoutonOff));
+            lcd.print(" s ");
+
+            lcd.setCursor(0, 4);
+            lcd.print("n: ");
+            lcd.print(Rendement);
+        }
     }
         
     if (boutonState == HIGH && chronoStatus == true) {
@@ -73,24 +112,5 @@ void loop() {
         Serial.println("Chrono OFF = " + String(millisBoutonOff));
         chronoStatus = false;
         motorStop();
-      
-        int coeffRendement = x;//j'ai pas le coeff
-        float EnergieUtile = coeffRendement * EnergieABS;
-        float Rendement = EnergieUtile / EnergieABS;
-        
-        lcd.setCursor(0, 0);
-        lcd.print("U= 5V"); //display voltage on the screen
-
-        lcd.setCursor(0, 1);
-        lcd.print("I= 40mA"); //display current intensity on the screen
-
-        lcd.setCursor(1, 0);
-        lcd.print(int(millisBoutonOff), "s"); //display the travel time on the screen
-
-        lcd.setCursor(1, 1);
-        lcd.print(EnergieABS); //display the absorbed energy on the screen
-
-        lcd.setCursor(2, 0);
-        lcd.print(Rendement);
     }
 }
