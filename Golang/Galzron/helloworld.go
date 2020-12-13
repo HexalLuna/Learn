@@ -1,8 +1,9 @@
 // Ici nous allons afficher un simple message "Hello World !"
+package main
 
-package helloworld
-
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	fmt.Println("Hello World !")
