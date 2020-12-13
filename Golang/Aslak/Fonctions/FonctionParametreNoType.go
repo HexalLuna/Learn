@@ -13,13 +13,13 @@ func affichage(nom string, age int) {
 }
 
 func main() {
-    affichage("Clément", 19)
-    affichage("Alexis", 12)
+    affichage("Clément", 8)
+    affichage("Alexis", 16)
 }
 
 /*
 Résultat :
 
-Bonjour Clément vous avez 19 ans
-Bonjour Alex vous avez 12 ans
+Bonjour Clément vous avez 8 ans
+Bonjour Alex vous avez 16 ans
 */
