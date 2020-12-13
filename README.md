@@ -2,7 +2,7 @@
 
 ## Français 🇨🇵
 
-Dans cette repositories public, vous pourrez voir notre avancement dans notre apprentissage de 5 merveilleux langages de programmation qui sont : Luagg, Python, C++, Golang et Javascript. 
+Dans ce répertoire public, vous pourrez voir notre avancement dans notre apprentissage de 5 merveilleux langages de programmation qui sont : Luagg, Python, C++, Golang et JavaScript. 
 
 Ceci nous est très utile si nous avons un trou de mémoire etc sur la manière d'utiliser ou procéder pour effectuer ce que l'on demande, mais cela peut très bien vous êtres utiles à vous aussi si vous aviez du mal sur quelque chose dans l'un de ces 5 langages vous n'avez qu'a regarder ici !
 
@@ -10,7 +10,7 @@ Vous pourrez également observer notre façon / style et niveau dans le dévelop
 
 ## English 🇬🇧
 
-In this public repositories, you will be able to see our progress in learning 5 wonderful programming languages which are : Luagg, Python, C++, Golang and Javascript. 
+In this public repositories, you will be able to see our progress in learning 5 wonderful programming languages which are : Luagg, Python, C++, Golang and JavaScript. 
 
 This is very useful for us if we have a memory lapse etc. on how to use or proceed to do what we ask, but it may very well be useful for you too if you were struggling with something in one of these 5 languages just have a look here!
 
