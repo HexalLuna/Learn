@@ -46,21 +46,22 @@ func main() {
 }
 
 /*
-
+---------------------------------------------------------------------------
 Résultat :
 
 Entrez votre age : 16
 Sortez !
+---------------------------------------------------------------------------
 Entrez votre age : 19
 Entrez votre prenom : Hatim
 Ah c'est toi Hatim, dehors !
+---------------------------------------------------------------------------
 Entrez votre age : 18
 Entrez votre prenom : Fred
 Hum vous avez de la chance je suis de bonne humeur, entrez !
-
- 
+---------------------------------------------------------------------------
 Entrez votre age : 18
 Entrez votre prenom : Alex
 Vous n'avez vraiment pas de chance sortez !
-
+---------------------------------------------------------------------------
 */
