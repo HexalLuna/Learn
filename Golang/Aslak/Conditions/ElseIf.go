@@ -33,8 +33,8 @@ func main() {
 
     if age < 18 {
         fmt.Println("Sortez !")
-    } else if prenom == "Hatim" || prenom == "hatim" {
-        fmt.Println("Ah c'est toi Hatim, dehors !")
+    } else if prenom == "Clément" || prenom == "hatim" {
+        fmt.Println("Ah c'est toi Clément, dehors !")
     } else if age == 18 && radomInt == 1 { // si le client est chanceux et qu'il a 18 ans
         fmt.Println("Hum vous avez de la chance je suis de bonne humeur, entrez !")
     } else if radomInt2 == 0 {
@@ -53,8 +53,8 @@ Entrez votre age : 16
 Sortez !
 ---------------------------------------------------------------------------
 Entrez votre age : 19
-Entrez votre prenom : Hatim
-Ah c'est toi Hatim, dehors !
+Entrez votre prenom : Clément
+Ah c'est toi Clément, dehors !
 ---------------------------------------------------------------------------
 Entrez votre age : 18
 Entrez votre prenom : Fred
