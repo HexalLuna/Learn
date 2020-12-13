@@ -1,8 +1,4 @@
-*/
-
-on importe bufio pour le scanner
-
-/*
+// on importe bufio pour le scanner
 
 package main
 
@@ -20,10 +16,10 @@ func main() {
     fmt.Println(entreeUtilisateur)
 }
 
-*/
-Résultat :
+/*
 
+Résultat :
 Entrez quelque chose : quelque chose
 quelque chose
 
-/*
+*/
