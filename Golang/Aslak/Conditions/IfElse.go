@@ -25,9 +25,9 @@ func main() {
     }
 }
 
-*/ Résultat :
+/* Résultat :
 
 Entrez votre age : 16
 Sortez !
 
-/*
+*/
