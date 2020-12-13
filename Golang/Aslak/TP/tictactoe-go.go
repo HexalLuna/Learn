@@ -1,10 +1,11 @@
 package main
 
-import "github.com/tadvi/winc"
+import "github.com/tadvi/winc" // import winc qui va servir au design du morpion
 
 var cases []*winc.PushButton
 var player string
 
+// Paramétrer winc
 func main() {
 	player = "X"
 	mainWindow := winc.NewForm(nil)
@@ -51,6 +52,7 @@ func wndOnClose(arg *winc.Event) {
 	winc.Exit()
 }
 
+// Tableau du morpion
 func checkEnd() bool {
 	if cases[0].Text() == player && cases[1].Text() == player && cases[2].Text() == player {
 		return true
@@ -79,15 +81,18 @@ func checkDraw() bool {
 	return true
 }
 
+// Parémtrer le .exe lors de la fin de la partie
 func gameEnded(isWon bool, player string) {
 	winWindow := winc.NewForm(nil)
 	winWindow.SetSize(400, 400)
 	if isWon {
+		// en cas de victoire
 		winWindow.SetText("Morpion By Aslak - Victoire")
 		label := winc.NewLabel(winWindow)
 		label.SetPos(10, 10)
 		label.SetText("Victoire du joueur " + player)
 	} else {
+		// en cas d'égalité
 		winWindow.SetText("Morpion By Aslak- Égalité")
 		label := winc.NewLabel(winWindow)
 		label.SetPos(10, 10)
@@ -95,5 +100,6 @@ func gameEnded(isWon bool, player string) {
 		label.SetText("Égalité : pas de gagnant...")
 	}
 	winWindow.Show()
+	// fermer la fenêtre
 	winWindow.OnClose().Bind(wndOnClose)
 }
