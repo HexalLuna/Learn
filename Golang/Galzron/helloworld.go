@@ -1,9 +1,9 @@
 package main
 
 import ( //Importation du pakage fmt
-	"fmt"
+    "fmt"
 )
 
-func hw() {
-	fmt.Println("Hello World !") //Ici la console me renvoie un Hello World
+func main() {
+    fmt.Println("Hello World !") //Ici la console me renvoie un Hello World
 }
