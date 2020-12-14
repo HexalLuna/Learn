@@ -5,13 +5,13 @@ import "fmt"
 
 type void func()
 
-func ain()  {
-	var f void
+func main()  {
+    var f void
 
-	process(func() {})
-	fmt.Printf("\n %T", f)
+    process(func() {})
+    fmt.Printf("\n %T", f)
 }
 
 func process(f void) {
-	f()
+    f()
 }
