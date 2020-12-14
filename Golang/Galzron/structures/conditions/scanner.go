@@ -1,4 +1,4 @@
-package main
+package main //Merci à Aslak de m'avoir expliquer pourquoi utiliser le package bufio pour ce type d'entrée utilisateur et non le package fmt
 
 import (
     "fmt"
