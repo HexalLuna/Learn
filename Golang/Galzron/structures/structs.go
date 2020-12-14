@@ -3,61 +3,61 @@ package main
 import "fmt"
 
 type user struct {
-	name string
-	todos []*todo
+    name string
+    todos []*todo
 }
 
 type todo struct {
-	text string
-	done bool
+    text string
+    done bool
 }
 
 type printable interface {
-	print() string
+    print() string
 }
 
 func (u user) show()  {
-	fmt.Printf("Name: %s\n", u.name)
-	fmt.Printf("Todos: %d\n", len(u.todos))
+    fmt.Printf("Name: %s\n", u.name)
+    fmt.Printf("Todos: %d\n", len(u.todos))
 
-	for _, t := range u.todos {
-		fmt.Printf("<Todo text=%s done=%v", t.text, t.done)
-	}
+    for _, t := range u.todos {
+    	fmt.Printf("<Todo text=%s done=%v", t.text, t.done)
+    }
 }
 
 //func (receiver) identifier(args) (returns)
 func (u *user) addTodo(t *todo)  {
-	u.todos= append(u.todos, t)
+    u.todos= append(u.todos, t)
 }
 
 func (t *todo) toggle() {
-	t.done = !t.done
+    t.done = !t.done
 }
 
 func (u user) print() string {
-	return fmt.Sprintf("Hello User, My name is %s.\n", u.name)
+    return fmt.Sprintf("Hello User, My name is %s.\n", u.name)
 }
 
 func details(t printable)  {
-	fmt.Println(t.print())
+    fmt.Println(t.print())
 }
 
 func (t todo) print() string {
-	return fmt.Sprintf("<Todo text=%s done=%v>\n", t.text, t.done)
+    return fmt.Sprintf("<Todo text=%s done=%v>\n", t.text, t.done)
 }
 
 func main()  {
 
-	u := user{name: "Alexis"}
-	t := todo{text: "Finir le bot Miraï"}
+    u := user{name: "Alexis"}
+    t := todo{text: "Finir le bot Miraï"}
 	
-	t.toggle()
-	u.addTodo(&t)
+    t.toggle()
+    u.addTodo(&t)
 
-	u.show()
-	t.toggle()
-	u.show()
+    u.show()
+    t.toggle()
+    u.show()
 
-	details(u)
-	details(t)
+    details(u)
+    details(t)
 }
