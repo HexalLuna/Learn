@@ -1,25 +1,25 @@
 package main
 
 type Person struct {
-	name string
-	age int
-	city,phone string
+    name string
+    age int
+    city,phone string
 }
 
 type Speaker struct {
-	Person //type embedding for composition
-	speaksOn []string
-	pastEvents []string
+    Person //type embedding for composition
+    speaksOn []string
+    pastEvents []string
 }
  
 type Organizer struct {
-	Person //type embedding for composition
-	meetups []string
+    Person //type embedding for composition
+    meetups []string
 }
  
 type Attendee struct {
-	Person //type embedding for composition
-	interests []string
+    Person //type embedding for composition
+    interests []string
 }
 
 /**
