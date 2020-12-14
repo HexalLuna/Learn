@@ -7,7 +7,7 @@ func main() {
     var mdp int //déclaration de la variable servant au mot de passe
 	
     fmt.Println("Bonjour, veuillez vous identifiez par votre prénom s'il vous plaît:")
-    fmt.Scanln(&name) //scand ma variable name et ouvre une entrée utilisateur dans la console
+    fmt.Scanln(&name) //scan ma variable name et ouvre une entrée utilisateur dans la console
 
     fmt.Println("Mot de passe: ")
     fmt.Scanln(&mdp) //scan ma variable mdp et ouvre une entrée utilisateur dans la console
