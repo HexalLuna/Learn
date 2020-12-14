@@ -5,7 +5,7 @@ import "fmt"
 
 type void func()
 
-func main()  {
+func ain()  {
 	var f void
 
 	process(func() {})

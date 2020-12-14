@@ -10,7 +10,7 @@ type user struct { //Définition du mon type user qui est une structure de donn�
 type entier int //Création d'un nouveau type
 type Entier = int //Création d'un aliase vers un type
 
-func main()  {
+func mai1n()  {
 	u := user{id: 18, name: "Clément"} //attribution des valeurs sur mon type user
 	u2 := user{id: 16, name: "Alexis"}
 
