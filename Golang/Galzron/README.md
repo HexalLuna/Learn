@@ -1,3 +1,1 @@
-# Golang\Galzron
-
-Avancement de l'apprentissage de Galzron
+Golang progression of Alex

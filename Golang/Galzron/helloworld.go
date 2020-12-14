@@ -1,10 +1,9 @@
-// Ici nous allons afficher un simple message "Hello World !"
 package main
 
-import (
-    "fmt"
+import ( //Importation du pakage fmt
+	"fmt"
 )
 
-func main() {
-    fmt.Println("Hello World !")
+func hw() {
+	fmt.Println("Hello World !") //Ici la console me renvoie un Hello World
 }
