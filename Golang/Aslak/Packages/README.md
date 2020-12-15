@@ -24,7 +24,7 @@ Lorsque vous créez un paquet et que vous l'importez sur votre package principal
 
 ``$GOROOT`` et ``$GOPATH`` sont deux variables d'environnement créez lors de l'installation de GO.
 
-### > Suite 
+### Variables d'environnement Go 
 
 Il est possible d'afficher toutes vos variables d'environnement Go comme suit :
 
