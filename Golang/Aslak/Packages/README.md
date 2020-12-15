@@ -4,6 +4,7 @@
 Un package n'est rien d'autre qu'un répertoire contenant des fichiers de code go, qui peut être exécuté par d'autres fichiers go.
 
 ### Types de packages
+
 il existe deux types de packages :
 
 * Package exécutable
