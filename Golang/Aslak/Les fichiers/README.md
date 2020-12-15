@@ -2,7 +2,7 @@
 
 Vous pouvez efficacement lire et écrire sur des fichiers à l'aide du langage de programmation go.
 
-### Ce que j'ai fais dans le fichier : EcrireSurFichier.go
+### Ce que j'ai fais dans le fichier __EcrireSurFichier.go__
 
 Je reviens ici sur ces lignes de code :
 
