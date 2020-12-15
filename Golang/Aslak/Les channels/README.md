@@ -11,3 +11,9 @@ Pour déclarer votre channel, vous utiliserez le mot-clé ``make`` avec le mot-c
 ```go
 ch := make(chan typeDeValeur)
 ```
+
+### Les channels sont bloquants
+
+Les envois et les réceptions sur un channel est bloquant par défaut. Qu'est-ce que ça veut dire ? Lorsqu'une donnée est envoyée à un channel, le contrôle est bloqué dans l'instruction d'envoi jusqu'à ce qu'une autre goroutine lise depuis ce channel. De la même manière, lorsque des données sont lues sur un channel, la lecture est bloquée jusqu'à ce qu'une certaine goroutine écrit des données sur ce channel.
+
+C'est cette propriété des channels qui permet aux goroutines de communiquer efficacement sans l'utilisation de verrous explicites ou de variables conditionnelles.
