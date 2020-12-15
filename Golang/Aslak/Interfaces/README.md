@@ -1,6 +1,6 @@
 # Les Interfaces
 
-## Qu'est ce que c'est ?
+## Qu'est-ce que c'est ?
 
 Les interfaces sont une sorte de contrat, ils permettent de créer des comportements génériques:
 si plusieurs structures doivent obéir à des comportements particuliers, alors on créé une interface décrivant ces comportements. 
