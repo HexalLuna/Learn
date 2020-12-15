@@ -29,4 +29,7 @@ func main() {
 Résultat :
 
 test
+
+
+(suite : Iterations3.go)
 */
