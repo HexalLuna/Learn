@@ -20,7 +20,8 @@ C'est cette propriété des channels qui permet aux goroutines de communiquer ef
 
 ### Deadlock
 
-Par défaut, les channels sont dit **unbuffered**, ce qui signifie qu'ils n'accepteront pas de **récepteur** ( chan<-) que s'il existe un **expéditeur** ( <- chan) correspondant prêt à recevoir la valeur envoyée, l'inverse est aussi vrai.
+Par défaut, les channels sont dit **unbuffered**, ce qui signifie qu'ils n'accepteront pas de **récepteur** ( chan<-) que s'il existe 
+un **expéditeur** ( <- chan) correspondant prêt à recevoir la valeur envoyée, l'inverse est aussi vrai.
 
 Voila ce que j'entend par expéditeur et récepteur :
 
