@@ -17,3 +17,12 @@ ch := make(chan typeDeValeur)
 Les envois et les réceptions sur un channel est bloquant par défaut. Qu'est-ce que ça veut dire ? Lorsqu'une donnée est envoyée à un channel, le contrôle est bloqué dans l'instruction d'envoi jusqu'à ce qu'une autre goroutine lise depuis ce channel. De la même manière, lorsque des données sont lues sur un channel, la lecture est bloquée jusqu'à ce qu'une certaine goroutine écrit des données sur ce channel.
 
 C'est cette propriété des channels qui permet aux goroutines de communiquer efficacement sans l'utilisation de verrous explicites ou de variables conditionnelles.
+
+### Deadlock
+
+Par défaut, les channels sont dit **unbuffered**, ce qui signifie qu'ils n'accepteront pas de **récepteur** ( chan<-) que s'il existe un **expéditeur** ( <- chan) correspondant prêt à recevoir la valeur envoyée, l'inverse est aussi vrai.
+
+Voila ce que j'entend par expéditeur et récepteur :
+
+* **récepteur** : c'est le moment où on entre une valeur dans notre channel
+* **expéditeur** : c'est le moment où on lit une valeur depuis notre channel
