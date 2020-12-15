@@ -31,9 +31,10 @@ Il est possible d'afficher toutes vos variables d'environnement Go comme suit :
 ```go
 go env
 ```
-Résultat :
-set GOCACHE=C:\Users\hatim\AppData\Local\go-build
+### Résultat :
+
+```set GOCACHE=C:\Users\hatim\AppData\Local\go-build
 ...
 set GOPATH=C:\Users\hatim\go
 set GOROOT=C:\Go
-...        
+...```        
