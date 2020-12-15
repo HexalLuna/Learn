@@ -35,6 +35,6 @@ go env
 
 ```set GOCACHE=C:\Users\Admin\AppData\Local\go-build
 ...
-set GOPATH=C:\Users\hatim\go
+set GOPATH=C:\Users\Admin\go
 set GOROOT=C:\Go
 ...```        
