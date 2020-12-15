@@ -31,5 +31,5 @@ Alors, déjà on peut remarquer qu'on arrive à lire notre première valeur de n
 L'erreur vient du fait qu'on est en train de lire sur un channel avec un buffer de taille 2, 
 sauf que ne nous n'avons rentré qu'une seule valeur dans notre channel d'où l'erreur.
 
-Suite à Iteration2.go
+Suite à Iterations2.go
 */
