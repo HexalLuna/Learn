@@ -27,3 +27,11 @@ Voila ce que j'entend par expéditeur et récepteur :
 
 * **récepteur** : c'est le moment où on entre une valeur dans notre channel
 * **expéditeur** : c'est le moment où on lit une valeur depuis notre channel
+
+### Buffered Channels
+
+il est possible de rendre nos channels buffered, c'est-à-dire de posséder autant de récepteurs que la taille du buffer de notre channel, par exemple un channel avec une taille de buffer de 30 peut posséder 30 récepteurs.
+
+Pour rendre notre channel buffered, il suffit d'indiquer la longueur de notre buffer comme second argument de notre canal.
+
+```ch := make(chan type-de-valeur, taille_du_buffer)```
