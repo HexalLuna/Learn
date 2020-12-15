@@ -19,3 +19,7 @@ Un package utilitaire n'est pas auto-exécutable, il améliore plutôt les fonct
 Pour importer un paquet, il faut utiliser le mot-clé **import** suivi du `nom du paquet`.
 
 Lorsque vous créez un paquet et que vous l'importez sur votre package principal, votre compilateur va d'abord chercher le répertoire du paquet dans le $GOROOT/src/ et si répertoire n'existe pas il va le cherchera dans le dossier `$GOPATH/src/`.
+
+### Informations
+
+``$GOROOT`` et ``$GOPATH`` sont deux variables d'environnement créez lors de l'installation de GO.
