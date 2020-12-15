@@ -1,6 +1,5 @@
 /*
 Notre interface Forme possède deux signatures :
-
 - Air() qui retourne un type float64
 - Perimetre() qui retourne un type float64
 La structure qui va implémenter l'interface Forme doit obligatoirement implémenter les méthodes Air() et Perimetre() signées dans l'interface Forme.
