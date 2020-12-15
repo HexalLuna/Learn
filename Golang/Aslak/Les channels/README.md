@@ -34,7 +34,9 @@ il est possible de rendre nos channels buffered, c'est-à-dire de posséder auta
 
 Pour rendre notre channel buffered, il suffit d'indiquer la longueur de notre buffer comme second argument de notre canal.
 
-```ch := make(chan type-de-valeur, taille_du_buffer)```
+```go
+ch := make(chan type-de-valeur, taille_du_buffer)
+```
 
 ### Itération dans un channel
 
