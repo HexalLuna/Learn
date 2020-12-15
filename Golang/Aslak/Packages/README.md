@@ -33,7 +33,7 @@ go env
 ```
 ### Résultat :
 
-```set GOCACHE=C:\Users\hatim\AppData\Local\go-build
+```set GOCACHE=C:\Users\Admin\AppData\Local\go-build
 ...
 set GOPATH=C:\Users\hatim\go
 set GOROOT=C:\Go
