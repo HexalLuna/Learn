@@ -18,10 +18,11 @@ func main() {
     fmt.Println(f)
 }
 
-*/
+/*
 Comme vous pouvez le voir dans une interface on ne met que des signatures de méthodes sans aucun attributs. 
 Pour le moment ces méthodes ne sont pas encore utilisées car pour l'instant je vous montre juste comment déclarer une interface.
 */
+
 /*
 -----------------------------
 Résultat :
