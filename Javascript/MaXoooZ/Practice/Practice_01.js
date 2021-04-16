@@ -22,7 +22,7 @@ function fr() {
 
     // Correction :
 
-    if ($arr[0] > arr[arr.length - 1]) {
+    if (arr[0] > arr[arr.length - 1]) {
         // Est plus grand
     } else {
         // N'est pas plus grand
@@ -51,7 +51,7 @@ function en() {
 
     // Correction :
 
-    if ($arr[0] > arr[arr.length - 1]) {
+    if (arr[0] > arr[arr.length - 1]) {
         // Is bigger
     } else {
         // is not bigger
