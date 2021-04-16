@@ -19,9 +19,9 @@ function fr() {
     	Par exemple, si nous voulons demander à l'utilisateur si son nom est "Martin", nous pouvons utiliser la fonction de confirmation.
     */
 
-    $name = "Martin";
+    var name = "Martin";
 
-    if ($name === "Martin" /*La majuscule est importante!*/ ) {
+    if (name === "Martin" /*La majuscule est importante!*/ ) {
         // Oui il s'appelle bien Martin
     } else {
         // Non il ne s'appelle pas Martin
@@ -30,18 +30,18 @@ function fr() {
 
     // Nous pouvons aussi comparer plusieurs nombres!
 
-    $numberOne = 7;
-    $numberTwo = 10;
+    var numberOne = 7;
+    var numberTwo = 10;
 
-    if ($numberTwo >= $numberOne) { // ">=" = est ou est plus grand
+    if (numberTwo >= $numberOne) { // ">=" = est ou est plus grand
         // Est plus grand
     }
 
     // Si vous avez besoin de verifier plusieurs fois quelque chose vous pouvez le faire!
 
-    $name = "Julie";
+    var name = "Julie";
 
-    switch ($name) {
+    switch (name) {
         case "Julie":
             // Le nom est Julie donc ici ecrivez votre code
             break;
@@ -79,9 +79,9 @@ function en() {
     	For example, if we want to ask the user if his name is "Martin", we can use the confirmation function.
     */
 
-    $ name = "Martin";
+    var name = "Martin";
 
-    if ($ name === "Martin" /* Uppercase is important! */ ) {
+    if (name === "Martin" /* Uppercase is important! */ ) {
         // Yes his name is Martin
     } else {
         // No his name is not Martin
@@ -89,19 +89,19 @@ function en() {
 
     // We can also compare several numbers!
 
-    $ numberOne = 7;
-    $ numberTwo = 10;
+    var numberOne = 7;
+    var numberTwo = 10;
 
-    if ($ numberTwo > = $ numberOne) { // "> =" = is or is greater
+    if (numberTwo > = numberOne) { // "> =" = is or is greater
         // Is bigger
     }
 
     // If you need to check something more than once you can do it!
 
-    $ name = "Julie";
+    var name = "Julie";
 
-    switch ($ name) {
-        box "Julie":
+    switch (name) {
+        case "Julie":
             // The name is Julie so here write your code
             break;
 
