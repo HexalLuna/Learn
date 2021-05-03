@@ -18,7 +18,7 @@ function fr() {
         Site pour executer les lignes de code : https://jsbin.com/juwokohedi/edit?js,console
     */
 
-    arr = [19, 52, 125, 91];
+    const arr = [19, 52, 125, 91];
 
     // Correction :
 
@@ -47,7 +47,7 @@ function en() {
         Site to execute the lines of code: https://jsbin.com/juwokohedi/edit?js,console
     */
 
-    arr = [19, 52, 125, 91];
+    const arr = [19, 52, 125, 91];
 
     // Correction :
 
