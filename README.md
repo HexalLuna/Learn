@@ -2,7 +2,7 @@
 
 ## Français
 
-Dans ce répertoire public, vous pourrez voir notre avancement dans notre apprentissage de 5 merveilleux langages de programmation qui sont : C++, Python and Golang. <br>
+Dans ce répertoire public, vous pourrez voir notre avancement dans notre apprentissage de 3 merveilleux langages de programmation qui sont : C++, Python and Golang. <br>
 Ceci nous est très utile si nous avons un trou de mémoire etc sur la manière d'utiliser ou procéder pour effectuer ce que l'on demande, mais cela peut très bien vous êtres utiles à vous aussi si vous aviez du mal sur quelque chose dans l'un de ces 5 langages vous n'avez qu'a regarder ici !
 
 Vous pourrez également observer notre façon / style et niveau dans le développement et peut être qui sait deviner nos projets futur !
