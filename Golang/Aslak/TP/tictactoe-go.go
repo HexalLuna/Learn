@@ -103,3 +103,4 @@ func gameEnded(isWon bool, player string) {
 	// fermer la fenêtre
 	winWindow.OnClose().Bind(wndOnClose)
 }
+
