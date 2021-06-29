@@ -15,6 +15,7 @@ func main() {
     ch := make(chan int, size) // channel avec un buffer de taille 10
 
     // 5 expéditeurs
+    
     for j := 0; j < 5; j++ {
         wg.Add(1)
         go func() {
