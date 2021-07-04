@@ -1,6 +1,6 @@
 /*
-Comme on peut accéder à l'adresse mémoire d'une variable depuis un pointeur
-alors il est tout à fait réalisable de modifier la valeur qui se trouve dans cette adresse mémoire.
+* Comme on peut accéder à l'adresse mémoire d'une variable depuis un pointeur
+* alors il est tout à fait réalisable de modifier la valeur qui se trouve dans cette adresse mémoire.
 */
 
 package main
